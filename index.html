@@ -4,10 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora De Matrices</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js"></script>
 </head>
 <body>
-    <h1>Calculadora de Matrices</h1>
+    <h1 class="h1">Calculadora de Matrices</h1>
+    
+        <div class="container">
+            <div class="controls">
+              <label for="matrixSize">Tamaño De Matriz (n x n):</label>
+              <input type="number" id="matrixSize" min="2" max="10" value="3" />
+              <button onclick="generateMatrices()">Generar Matriz</button>
+              <button onclick="randomizeMatrices()">Generar Matriz Aleatoria</button>
+            </div>
+
+            <div class="matrix-container">
+                <div class="matrix-input">
+                    <h3 class="h3-design">Matriz 1</h3>
+                    <div id="matrixA" class="matrix"></div>
+                  </div>
+                  <div class="matrix-input">
+                    <h3 class="h3-design">Matriz 2</h3>
+                    <div id="matrixB" class="matrix"></div>
+                  </div>
+            </div>
+
+            <div class="controls-result">
+                <button onclick="addMatrices()">Suma</button>
+                <button onclick="subtractMatrices()">Resta</button>
+                <button onclick="multiplyMatrices()">Multiplicacion</button>
+                <button onclick="scalarMultiply()">× por Escalar</button>
+                <button onclick="transposeMatrixA()">Transposicion</button>
+                <button onclick="calculateDeterminant()">Determinante</button>
+                <button onclick="calculateInverse()">Inversa</button>
+                <button onclick="generateIdentityMatrix()">Matriz Identidad</button>
+              </div>
+          
+              
+              <div class="result" id="result">
+                <h3>Resultado:</h3>
+                <div id="resultContent"></div>
+              </div>
+            </div>
+        </div>
+    
 </body>
 </html>
